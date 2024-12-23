@@ -1,11 +1,11 @@
 import styles from './styles.module.scss';
-import Picture1 from '../../../public/images/1.jpeg';
-import Picture2 from '../../../public/images/2.jpeg';
-import Picture3 from '../../../public/images/3.jpg';
-import Picture4 from '../../../public/images/4.jpg'
-import Picture5 from '../../../public/images/5.jpg'
-import Picture6 from '../../../public/images/6.jpg'
-import Picture7 from '../../../public/images/7.jpeg'
+import Picture1 from '../../../public/images/hibah4.jpg';
+import Picture2 from '../../../public/images/hibah1.jpg';
+import Picture3 from '../../../public/images/hibah2.jpg';
+import Picture4 from '../../../public/images/hibah3.jpg';
+import Picture5 from '../../../public/images/hibah5.jpg';
+import Picture6 from '../../../public/images/hibah6.jpg';
+import Picture7 from '../../../public/images/hibah7.jpg';
 import Image from 'next/image';
 import { useScroll, useTransform, motion} from 'framer-motion';
 import { useRef } from 'react';
@@ -56,7 +56,7 @@ export default function Index() {
     ]
 
     return (
-        <div ref={container} className={styles.container}>
+        <div ref={container} className={styles.container} id="gallery">
             <div className={styles.sticky}>
                 {
                     pictures.map( ({src, scale}, index) => {
@@ -67,6 +67,7 @@ export default function Index() {
                                     fill
                                     alt="image"
                                     placeholder='blur'
+                                    className='overflow-hidden'
                                 />
                             </div>
                         </motion.div>
