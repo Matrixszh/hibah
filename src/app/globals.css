@@ -37,3 +37,86 @@ body{
    padding-bottom: 20vh;
 
   }
+  /* Custom CSS for the NavBar */
+
+/* Navbar Container */
+.navbar {
+  background-color: #000; /* Black background for the navbar */
+  color: #fff; /* White text */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 16px 32px; /* Padding for spacing */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Logo Styling */
+.navbar .logo {
+  font-size: 1.875rem; /* Large font size for logo */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fbbf24; /* Yellow accent for logo */
+  cursor: pointer;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Menu Items */
+.navbar .menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem; /* Spacing between the menu items */
+}
+
+.navbar .menu a {
+  font-size: 1.125rem; /* Medium font size for menu items */
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar .menu a:hover {
+  color: #fbbf24; /* Yellow hover color */
+  transform: scale(1.1); /* Slight scaling on hover */
+}
+
+/* Mobile Menu Icon */
+.navbar .mobile-menu-icon {
+  display: none;
+}
+
+.navbar .mobile-menu-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navbar .mobile-menu-icon:hover {
+  transform: rotate(90deg);
+}
+
+/* Responsive Styling for Mobile */
+@media (max-width: 768px) {
+  .navbar .menu {
+    display: none; /* Hide menu items on mobile */
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar .mobile-menu-icon {
+    display: block;
+  }
+
+  .navbar .menu.active {
+    display: flex; /* Show menu items when active */
+  }
+}
+button {
+  transition: all 0.3s ease;
+}

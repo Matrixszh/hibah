@@ -54,11 +54,11 @@ export default function Home() {
             <FancyTextSlide />
 
 
-            <div style={{ height: "100vh" }}></div>
-            <Character paragraph={paragraph} id="quotes" />
+            <div style={{ height: "25vh" }} id="quotes"></div>
+            <Character paragraph={paragraph} />
             <div style={{ height: "100vh" }}></div>
 
-            <ZoomParallax />
+
             <section ref={container} className={styles.main}>
                 {
                     projects.map((project, i) => {
