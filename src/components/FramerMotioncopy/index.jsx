@@ -6,6 +6,7 @@ import Picture3 from '../../../public/images/hibah2.jpg';
 import Picture1 from '../../../public/images/hibah3.jpg';
 import Image from "next/image";
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useLetterTransforms } from '@/components/useLetterTransforms'; // Import custom hook
 
 const word = "a gift from god";
 
@@ -16,39 +17,33 @@ export default function Index() {
         offset: ['start end', 'end start']
     });
 
-    // Precompute transform values for letters and images
+    // Precompute transform values
     const sm = useTransform(scrollYProgress, [0, 1], [0, -50]);
     const md = useTransform(scrollYProgress, [0, 1], [0, -150]);
     const lg = useTransform(scrollYProgress, [0, 1], [0, -250]);
-    const lettersTransforms = word.split("").map((_, i) =>
-        useTransform(scrollYProgress, [0, 1], [0, Math.floor(Math.random() * -75) - 25])
-    );
+
+    // Get letter transforms using custom hook
+    const lettersTransforms = useLetterTransforms(scrollYProgress, word);
 
     const images = [
-        {
-            src: Picture1,
-            y: 0
-        },
-        {
-            src: Picture2,
-            y: lg
-        },
-        {
-            src: Picture3,
-            y: md
-        }
+        { src: Picture1, y: 0 },
+        { src: Picture2, y: lg },
+        { src: Picture3, y: md },
     ];
 
     return (
-        <div className="padding">
+        <div className="padding" id="names">
             <div ref={containers} className={styles.containers}>
                 <div className={styles.bod}>
                     <motion.h1 style={{ y: sm }}>hibah</motion.h1>
-                    <h1>meaning</h1>
+                    <h1>Meaning</h1>
                     <div className={styles.word}>
                         <p>
                             {word.split("").map((letter, i) => (
-                                <motion.span style={{ top: lettersTransforms[i] }} key={`l_${i}`}>
+                                <motion.span
+                                    style={{ top: lettersTransforms[i] }}
+                                    key={`l_${i}`}
+                                >
                                     {letter}
                                 </motion.span>
                             ))}
@@ -57,13 +52,12 @@ export default function Index() {
                 </div>
                 <div className={styles.images}>
                     {images.map(({ src, y }, i) => (
-                        <motion.div style={{ y }} key={`i_${i}`} className={styles.imageContainer}>
-                            <Image
-                                src={src}
-                                placeholder="blur"
-                                alt="image"
-                                fill
-                            />
+                        <motion.div
+                            style={{ y }}
+                            key={`i_${i}`}
+                            className={styles.imageContainer}
+                        >
+                            <Image src={src} placeholder="blur" alt="image" fill />
                         </motion.div>
                     ))}
                 </div>
