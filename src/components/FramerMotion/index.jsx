@@ -15,12 +15,12 @@ export default function Index() {
         target: containers,
         offset: ['start end', 'end start']
     });
+
+    // Precompute transform values for text and images
     const sm = useTransform(scrollYProgress, [0, 1], [0, -50]);
     const md = useTransform(scrollYProgress, [0, 1], [0, -150]);
     const lg = useTransform(scrollYProgress, [0, 1], [0, -250]);
-
-    // Precompute transform values for each letter
-    const lettersTransforms = word.split("").map(() =>
+    const lettersTransforms = word.split("").map((_, i) =>
         useTransform(scrollYProgress, [0, 1], [0, Math.floor(Math.random() * -75) - 25])
     );
 
@@ -47,29 +47,25 @@ export default function Index() {
                     <h1>Meaning</h1>
                     <div className={styles.word}>
                         <p>
-                            {
-                                word.split("").map((letter, i) => (
-                                    <motion.span style={{ top: lettersTransforms[i] }} key={`l_${i}`}>
-                                        {letter}
-                                    </motion.span>
-                                ))
-                            }
+                            {word.split("").map((letter, i) => (
+                                <motion.span style={{ top: lettersTransforms[i] }} key={`l_${i}`}>
+                                    {letter}
+                                </motion.span>
+                            ))}
                         </p>
                     </div>
                 </div>
                 <div className={styles.images}>
-                    {
-                        images.map(({ src, y }, i) => (
-                            <motion.div style={{ y }} key={`i_${i}`} className={styles.imageContainer}>
-                                <Image
-                                    src={src}
-                                    placeholder="blur"
-                                    alt="image"
-                                    fill
-                                />
-                            </motion.div>
-                        ))
-                    }
+                    {images.map(({ src, y }, i) => (
+                        <motion.div style={{ y }} key={`i_${i}`} className={styles.imageContainer}>
+                            <Image
+                                src={src}
+                                placeholder="blur"
+                                alt="image"
+                                fill
+                            />
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </div>
