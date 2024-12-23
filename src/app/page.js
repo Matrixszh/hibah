@@ -1,8 +1,6 @@
 'use client'
 import styles from './page.module.scss'
 import ZoomParallax from '../components/ZoomParallax/index';
-import FramerMotion from '../components/FramerMotion/index';
-import FramerMotionC from '../components/FramerMotioncopy/index';
 import Card from '../components/Card/index';
 import { useEffect, useRef } from 'react';
 import Lenis from '@studio-freight/lenis'
@@ -61,8 +59,6 @@ export default function Home() {
             <div style={{ height: "100vh" }}></div>
 
             <ZoomParallax />
-            <FramerMotion />
-            <FramerMotionC />
             <section ref={container} className={styles.main}>
                 {
                     projects.map((project, i) => {
