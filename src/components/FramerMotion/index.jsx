@@ -16,27 +16,20 @@ export default function Index() {
         offset: ['start end', 'end start']
     });
 
-    // Precompute transform values for text and images
+    // Precompute transform values
     const sm = useTransform(scrollYProgress, [0, 1], [0, -50]);
     const md = useTransform(scrollYProgress, [0, 1], [0, -150]);
     const lg = useTransform(scrollYProgress, [0, 1], [0, -250]);
-    const lettersTransforms = word.split("").map((_, i) =>
+
+    // Generate transforms for each letter
+    const lettersTransforms = word.split("").map(() =>
         useTransform(scrollYProgress, [0, 1], [0, Math.floor(Math.random() * -75) - 25])
     );
 
     const images = [
-        {
-            src: Picture1,
-            y: 0
-        },
-        {
-            src: Picture2,
-            y: lg
-        },
-        {
-            src: Picture3,
-            y: md
-        }
+        { src: Picture1, y: 0 },
+        { src: Picture2, y: lg },
+        { src: Picture3, y: md },
     ];
 
     return (
@@ -48,7 +41,10 @@ export default function Index() {
                     <div className={styles.word}>
                         <p>
                             {word.split("").map((letter, i) => (
-                                <motion.span style={{ top: lettersTransforms[i] }} key={`l_${i}`}>
+                                <motion.span
+                                    style={{ top: lettersTransforms[i] }}
+                                    key={`l_${i}`}
+                                >
                                     {letter}
                                 </motion.span>
                             ))}
@@ -57,13 +53,12 @@ export default function Index() {
                 </div>
                 <div className={styles.images}>
                     {images.map(({ src, y }, i) => (
-                        <motion.div style={{ y }} key={`i_${i}`} className={styles.imageContainer}>
-                            <Image
-                                src={src}
-                                placeholder="blur"
-                                alt="image"
-                                fill
-                            />
+                        <motion.div
+                            style={{ y }}
+                            key={`i_${i}`}
+                            className={styles.imageContainer}
+                        >
+                            <Image src={src} placeholder="blur" alt="image" fill />
                         </motion.div>
                     ))}
                 </div>
