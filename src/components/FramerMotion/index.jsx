@@ -8,6 +8,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const word = "the light to my darkness";
+const randomOffsets = word.split("").map(() => Math.floor(Math.random() * -75) - 25);
 
 export default function Index() {
     const containers = useRef(null);
@@ -22,8 +23,8 @@ export default function Index() {
     const lg = useTransform(scrollYProgress, [0, 1], [0, -250]);
 
     // Generate transforms for each letter
-    const lettersTransforms = word.split("").map(() =>
-        useTransform(scrollYProgress, [0, 1], [0, Math.floor(Math.random() * -75) - 25])
+    const lettersTransforms = randomOffsets.map(offset =>
+        useTransform(scrollYProgress, [0, 1], [0, offset])
     );
 
     const images = [
