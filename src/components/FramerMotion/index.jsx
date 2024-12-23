@@ -6,9 +6,9 @@ import Picture3 from '../../../public/images/hibah2.jpg';
 import Picture1 from '../../../public/images/hibah3.jpg';
 import Image from "next/image";
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useLetterTransforms } from '@/components/useLetterTransforms'; // Import custom hook
 
 const word = "the light to my darkness";
-const randomOffsets = word.split("").map(() => Math.floor(Math.random() * -75) - 25);
 
 export default function Index() {
     const containers = useRef(null);
@@ -22,10 +22,8 @@ export default function Index() {
     const md = useTransform(scrollYProgress, [0, 1], [0, -150]);
     const lg = useTransform(scrollYProgress, [0, 1], [0, -250]);
 
-    // Generate transforms for each letter
-    const lettersTransforms = randomOffsets.map(offset =>
-        useTransform(scrollYProgress, [0, 1], [0, offset])
-    );
+    // Get letter transforms using custom hook
+    const lettersTransforms = useLetterTransforms(scrollYProgress, word);
 
     const images = [
         { src: Picture1, y: 0 },
