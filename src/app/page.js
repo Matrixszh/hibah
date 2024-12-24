@@ -39,7 +39,7 @@ export default function Home() {
 
     return (
         <main className={styles.main}>
-
+            <FancyTextSlide />
             <div>
                 <h1>My Video</h1>
                 <VideoComponent
@@ -51,14 +51,13 @@ export default function Home() {
                     muted={true}
                 />
             </div>
-            <FancyTextSlide />
-
+            <div style={{ height: "25vh" }} id="quotes"></div>
+            <Character paragraph={paragraph} />
+            <div style={{ height: "100vh" }}></div>
             <ZoomParallax />
             <div style={{ height: "25vh" }} id="quotes"></div>
             <Character paragraph={paragraph} />
             <div style={{ height: "100vh" }}></div>
-
-
             <section ref={container} className={styles.main}>
                 {
                     projects.map((project, i) => {
