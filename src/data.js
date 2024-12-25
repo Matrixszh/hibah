@@ -1,37 +1,37 @@
 export const projects = [
   {
-    title: "Matthias Leidinger",
-    description: "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
-    src: "hibah1.jpg",
-    link: "https://www.google.com/search?q=beauty&rlz=1C1RLNS_enIN931IN931&oq=beauty&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDINCAEQLhiDARixAxiABDINCAIQABixAxjJAxiABDINCAMQABiSAxiABBiKBTINCAQQABiSAxiABBiKBTINCAUQLhjUAhixAxiABDINCAYQLhjUAhixAxiABDIKCAcQABixAxiABDIHCAgQABiABDIHCAkQABiABNIBCDQyMDFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8/",
-    color: "#BBACAF"
-  },
-  {
-    title: "Clément Chapillon",
-    description: "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
+    title: "Love at first sight",
+    description: "January 6th , when I first met you and everything started making sense ,the wrold turned beautiful you mere presence blessed me into becoming a gentle person the way you spoke the way you laughed the warmth of you being and everything realted to you was so bright just like your name Noor .",
     src: "hibah2.jpg",
+    link: "https://www.google.com/search?q=beauty&rlz=1C1RLNS_enIN931IN931&oq=beauty&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDINCAEQLhiDARixAxiABDINCAIQABixAxjJAxiABDINCAMQABiSAxiABBiKBTINCAQQABiSAxiABBiKBTINCAUQLhjUAhixAxiABDINCAYQLhjUAhixAxiABDIKCAcQABixAxiABDIHCAgQABiABDIHCAkQABiABNIBCDQyMDFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8/",
+    color: "#FFFFFF"
+  },
+  {
+    title: "Cutest Baby",
+    description: "Hibah when i look at you my heart and my mind cannot comprehend the cuteness you possess , in fact looking at your baby pictures makes me smile and happy and even to this day I still see that innocent side fo yours which amkes me so happy and i hope God always protects that innocence.",
+    src: "hibah9.jpg",
     link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
-    color: "#977F6D"
+    color: "#BDBBBB"
   },
   {
-    title: "Zissou",
-    description: "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
-    src: "hibah3.jpg",
+    title: "The Flower from heaven",
+    description: "I still remember the first date very vividly , the fist time ever i was getting flowers for a person , scared what to get , scared wether they would wilt away or you know coming out as someone too eager but as soon as i saw you i knew it the flowers were meant for you . ",
+    src: "flower.jpg",
     link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
-    color: "#C2491D"
+    color: "#656565"
   },
   {
-    title: "Mathias Svold and Ulrik Hasemann",
-    description: "The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.",
-    src: "hibah4.jpg",
+    title: "My little Marie Curie",
+    description: "Imagine dating a girl who is an abosolute genius of a person and her instincts are always on spot well i wouldn't need to imagine . your smartness and your intellect are the most attractive things to me .",
+    src: "artist.jpg",
     link: "https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/",
-    color: "#B62429"
+    color: "#555555"
   },
   {
-    title: "Mark Rammers",
-    description: "Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, ‘all over again’—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote. Titled ‘Beginnings’, the mesmerizing collection of images is a visual and meditative journey into the origins of regrets and the uncertainty of stepping into new unknowns.",
-    src: "hibah5.jpg",
+    title: "The Adventurer",
+    description: "whenever you go out alone i feel so happy i do know how hard it is for yo to be out and despite all those oddds you do make the effor to enjoy yourself just like an adventurer exploring places and enjoying yourself . it make me so happy . ",
+    src: "ikea.jpg",
     link: "https://www.ignant.com/2023/04/12/mark-rammers-all-over-again-is-a-study-of-regret-and-the-willingness-to-move-forward/",
-    color: "#88A28D"
+    color: "#FFFFFF"
   }
 ]

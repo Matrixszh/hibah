@@ -11,14 +11,14 @@ const FancyTextSlide = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: 'easeOut' }}
       >
-        <h1 className="fancy-title">"Noor"</h1>
+        <h1 className="fancy-title">"Hibah"</h1>
         <motion.p
           className="fancy-description"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
         >
-          The Light to my darkness
+          A gift from God
         </motion.p>
       </motion.div>
     </section>
